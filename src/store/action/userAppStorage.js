@@ -93,7 +93,7 @@ export const checkIfAdminIsLoggedIn = () => {
       }
       
     
-      response = await fetch(`https://back-end-great.onrender.com/adminbytoken`, {
+      response = await fetch(`https://back-end-hadr.onrender.com/adminbytoken`, {
         method: "GET",
         headers:{
           "Content-Type": "application/json",
@@ -118,7 +118,7 @@ export const loginAdmin = (data) => {
   let dataObj = data
   return async (dispatch, getState) => {
     try {
-      let response = await fetch('https://back-end-great.onrender.com/adminlogin', {
+      let response = await fetch('https://back-end-hadr.onrender.com/adminlogin', {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -177,7 +177,7 @@ export const signupAdmin = (data) => {
   let dataObj = data
   return async (dispatch, getState) => {
     try {
-      let response = await fetch(`https://back-end-great.onrender.com/adminsignup`, {
+      let response = await fetch(`https://back-end-hadr.onrender.com/adminsignup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -242,7 +242,7 @@ export const fetchUsers = ()=>{
       adminToken
     } = getState().userAuth
     try {
-      let response = await fetch('https://back-end-great.onrender.com/users', {
+      let response = await fetch('https://back-end-hadr.onrender.com/users', {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -304,7 +304,7 @@ export const deleteUser = (id)=>{
    
 
     try {
-      let response = await fetch(`https://back-end-great.onrender.com/users/${id}`, {
+      let response = await fetch(`https://back-end-hadr.onrender.com/users/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -356,7 +356,7 @@ export const updateUser = (data)=>{
     } = getState().userAuth
 
     try {
-      let response = await fetch(`https://back-end-great.onrender.com/users`, {
+      let response = await fetch(`https://back-end-hadr.onrender.com/users`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -413,7 +413,7 @@ export const fetchHistory = (user)=>{
     } = getState().userAuth
 
     try {
-      let response = await fetch(`https://back-end-great.onrender.com/history/${user}`, {
+      let response = await fetch(`https://back-end-hadr.onrender.com/history/${user}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -464,7 +464,7 @@ export const updateHistory = (data)=>{
     } = getState().userAuth
 
     try {
-      let response = await fetch(`https://back-end-great.onrender.com/history/${data._id}`, {
+      let response = await fetch(`https://back-end-hadr.onrender.com/history/${data._id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -520,7 +520,7 @@ export const fetchLoan = (user)=>{
     } = getState().userAuth
 
     try {
-      let response = await fetch(`https://back-end-great.onrender.com/loan/${user}`, {
+      let response = await fetch(`https://back-end-hadr.onrender.com/loan/${user}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -571,7 +571,7 @@ export const updateLoan = (data)=>{
     } = getState().userAuth
 
     try {
-      let response = await fetch(`https://back-end-great.onrender.com/loan/${data._id}`, {
+      let response = await fetch(`https://back-end-hadr.onrender.com/loan/${data._id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -624,7 +624,7 @@ export const fetchAccounts = (id)=>{
       adminToken
     } = getState().userAuth
     try {
-      let response = await fetch(`https://back-end-great.onrender.com/admin-accounts/${id}`, {
+      let response = await fetch(`https://back-end-hadr.onrender.com/admin-accounts/${id}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -685,7 +685,7 @@ export const deleteAccount = (id)=>{
       adminToken
     } = getState().userAuth
     try {
-      let response = await fetch(`https://back-end-great.onrender.com/admin-accounts/${id}`, {
+      let response = await fetch(`https://back-end-hadr.onrender.com/admin-accounts/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -736,7 +736,7 @@ export const updateAccount = (data)=>{
       adminToken
     } = getState().userAuth
     try {
-      let response = await fetch(`https://back-end-great.onrender.com/admin-accounts`, {
+      let response = await fetch(`https://back-end-hadr.onrender.com/admin-accounts`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -789,7 +789,7 @@ export const createAccount = (data,user)=>{
     } = getState().userAuth
 
     try {
-      let response = await fetch(`https://back-end-great.onrender.com/admin-accounts/${user}`, {
+      let response = await fetch(`https://back-end-hadr.onrender.com/admin-accounts/${user}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -847,7 +847,7 @@ export const fetchCard = (user)=>{
     } = getState().userAuth
 
     try {
-      let response = await fetch(`https://back-end-great.onrender.com/card/${user}`, {
+      let response = await fetch(`https://back-end-hadr.onrender.com/card/${user}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -892,7 +892,7 @@ export const fetchCard = (user)=>{
 }
 
 
-//https://back-end-great.onrender.com
+//https://back-end-hadr.onrender.com
 export const updateCard = (data)=>{
   return async (dispatch, getState) => {
     let {
@@ -900,7 +900,7 @@ export const updateCard = (data)=>{
     } = getState().userAuth
 
     try {
-      let response = await fetch(`https://back-end-great.onrender.com/card/${data._id}`, {
+      let response = await fetch(`https://back-end-hadr.onrender.com/card/${data._id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -955,7 +955,7 @@ export const updateAdmin = (data)=>{
     } = getState().userAuth
 
     try {
-      let response = await fetch(`https://back-end-great.onrender.com/admin/${data._id}`, {
+      let response = await fetch(`https://back-end-hadr.onrender.com/admin/${data._id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -1011,7 +1011,7 @@ export const credit = (data)=>{
     } = getState().userAuth
 
     try {
-      let response = await fetch(`https://back-end-great.onrender.com/credit`, {
+      let response = await fetch(`https://back-end-hadr.onrender.com/credit`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -1065,7 +1065,7 @@ export const debit = (data,user)=>{
     } = getState().userAuth
 
     try {
-      let response = await fetch(`https://back-end-great.onrender.com/debit`, {
+      let response = await fetch(`https://back-end-hadr.onrender.com/debit`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -1117,14 +1117,14 @@ export const debit = (data,user)=>{
 
 //fake https:///back-end-zf7t.onrender.com
 
-//https://back-end-great.onrender.com
+//https://back-end-hadr.onrender.com
 export const sendEmail = (data,id)=>{
   return async (dispatch, getState) => {
     let {
       adminToken
     } = getState().userAuth
     try {
-      let response = await fetch(`https://back-end-great.onrender.com/sendemail`, {
+      let response = await fetch(`https://back-end-hadr.onrender.com/sendemail`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
